@@ -12,7 +12,7 @@ for (var i = 0; i < rooms.length; i++) {
 var room = document.getElementById("room" + roomId);
 room.classList.add("active");
 }  
-// phong khach
+
 document.addEventListener('DOMContentLoaded', function() {
 
 //phòng khách
@@ -132,7 +132,7 @@ document.getElementById('btn2').addEventListener('click', function() {
 });
 
 document.getElementById('btn10').addEventListener('click', function() {
-  // Bật btn9 và tắt btn1
+
   btn2State = '0';
   btn10State = '1';
 
@@ -166,9 +166,8 @@ if (lightStatus.Light === '1') {
 }
   
 });
+
 // btn3 btn11
-
-
 document.getElementById('btn3').addEventListener('click', function() {
   // Bật btn3 và tắt btn111
   btn3State = '1';
@@ -222,7 +221,6 @@ if (airStatus.Air === '1') {
   document.getElementById('btn3').classList.remove('btn_color');
   document.getElementById('airfilter').src = 'img/air_off.png';
 }
-  
 });
 
 var sliderValue0 = localStorage.getItem('sliderValue0') || 1;
@@ -268,7 +266,7 @@ firebase.database().ref('Livingroom').child('Device/Curtain').on('value', functi
   updateCurtainImage(data_val);
 });
 });
-// phong bep
+
 document.addEventListener('DOMContentLoaded', function() {
 // phòng bếp
 var btn4State = localStorage.getItem('btn4State');
@@ -287,7 +285,6 @@ if (btn12State === null) {
 }
 
 document.getElementById('btn4').addEventListener('click', function() {
- 
   btn4State = '1';
   btn12State = '0';
 
@@ -300,7 +297,6 @@ document.getElementById('btn4').addEventListener('click', function() {
     status: btn4State,
   });
   
-
   // Cập nhật giao diện người dùng
   this.classList.add('btn_color');
   document.getElementById('btn12').classList.remove('btn_color');
@@ -308,7 +304,7 @@ document.getElementById('btn4').addEventListener('click', function() {
 });
 
 document.getElementById('btn12').addEventListener('click', function() {
-  // Bật btn9 và tắt btn1
+ 
   btn4State = '0';
   btn12State = '1';
 
@@ -330,12 +326,12 @@ firebase.database().ref('Kitchen/Vent').on('value', function(snapshot) {
 var ventStatus = snapshot.val();
 
 if (ventStatus.status === '1') {
-  // Bật btn1 và tắt btn9
+
   document.getElementById('btn4').classList.add('btn_color');
   document.getElementById('btn12').classList.remove('btn_color');
   document.getElementById('hood').src = 'img/kitchen_hood.png';
 } else if (ventStatus.status === '0') {
-  // Bật btn9 và tắt btn1
+ 
   document.getElementById('btn12').classList.add('btn_color');
   document.getElementById('btn4').classList.remove('btn_color');
   document.getElementById('hood').src = 'img/kitchen_off.png';
@@ -435,7 +431,7 @@ if (btn15State === null) {
   localStorage.setItem('btn15State', btn15State);
 }
 document.getElementById('btn6').addEventListener('click', function() {
-  // Bật btn1 và tắt btn9
+ 
   btn6State = '1';
   btn14State = '0';
 
@@ -456,7 +452,7 @@ document.getElementById('btn6').addEventListener('click', function() {
 });
 
 document.getElementById('btn14').addEventListener('click', function() {
-  // Bật btn9 và tắt btn1
+  
   btn6State = '0';
   btn14State = '1';
 
@@ -477,7 +473,7 @@ firebase.database().ref('Bedroom/Fan').on('value', function(snapshot) {
   var fan1Status = snapshot.val();
 
   if (fan1Status.status === '1') {
-    // Bật btn1 và tắt btn9
+    
     document.getElementById('btn6').classList.add('btn_color');
     document.getElementById('btn14').classList.remove('btn_color');
     document.getElementById('fan_bed').src = 'img/fan_running.png';
@@ -489,7 +485,7 @@ firebase.database().ref('Bedroom/Fan').on('value', function(snapshot) {
   }
   });
   document.getElementById('btn7').addEventListener('click', function() {
-    // Bật btn1 và tắt btn9
+    
     btn7State = '1';
     btn15State = '0';
   
@@ -510,7 +506,7 @@ firebase.database().ref('Bedroom/Fan').on('value', function(snapshot) {
   });
 
   document.getElementById('btn15').addEventListener('click', function() {
-    // Bật btn9 và tắt btn1
+    
     btn7State = '0';
     btn15State = '1';
   
