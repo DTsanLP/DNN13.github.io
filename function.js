@@ -186,7 +186,7 @@ document.getElementById('btn3').addEventListener('click', function() {
   // Cập nhật giao diện người dùng
   this.classList.add('btn_color');
   document.getElementById('btn11').classList.remove('btn_color');
-  document.getElementById('airfilter').src = 'air_filter.png';
+  document.getElementById('airfilter').src = 'img/air_filter.png';
 });
 
 document.getElementById('btn11').addEventListener('click', function() {
@@ -204,7 +204,7 @@ document.getElementById('btn11').addEventListener('click', function() {
   // Cập nhật giao diện người dùng
   this.classList.add('btn_color');
   document.getElementById('btn3').classList.remove('btn_color');
-  document.getElementById('airfilter').src = 'air_off.png';
+  document.getElementById('airfilter').src = 'img/air_off.png';
 });
   // Lắng nghe sự thay đổi trên cơ sở dữ liệu Firebase
 firebase.database().ref('Livingroom').child('Device').on('value', function(snapshot) {
@@ -383,7 +383,7 @@ document.getElementById('btn13').addEventListener('click', function() {
   // Cập nhật giao diện người dùng
   this.classList.add('btn_color');
   document.getElementById('btn5').classList.remove('btn_color');
-  document.getElementById('humidifier').src = 'img/Humidifier_off.png';
+  document.getElementById('humidifier').src = 'img/humidifier_off.png';
 });
     // Lắng nghe sự thay đổi trên cơ sở dữ liệu Firebase
 firebase.database().ref('Kitchen/Humidifier').on('value', function(snapshot) {
